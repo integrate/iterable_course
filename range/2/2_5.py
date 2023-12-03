@@ -22,3 +22,8 @@ for i in range(0,600, 70):
     b = wrap.sprite.add("battle_city_items", i, 30, "block_bushes")
     wrap.sprite.set_size(b, 20, 20)
     wrap.sprite.move_left_to(b, i + 50)
+
+
+
+import wrap_py
+wrap_py.app.start()
