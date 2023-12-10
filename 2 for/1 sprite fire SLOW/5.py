@@ -1,5 +1,5 @@
 """
-рядом с каждым спрайтом создайте огненный шар
+сделать, чтобы все шарики двигались плавно вправо и улетали за границу
 """
 import random
 
@@ -15,12 +15,16 @@ e= wrap.sprite.add("mario-enemies", 100, 100, "beetle_blue_go")
 
 l = [a,b,c,d,e]
 
+ball_list = []
+
 for s in l:
     y = random.randint(30, 300)
     wrap.sprite.move_to(s, random.randint(30, 300), y)
     wrap.sprite.set_size(s, random.randint(30,130), random.randint(30,130))
     ball = wrap.sprite.add("mario-enemies", 0, y, "fire_ball")
     wrap.sprite.move_left_to(ball, wrap.sprite.get_right(s))
+    ball_list.append(ball)
 
-import wrap_py
-wrap_py.app.start()
+while True:
+    for b in ball_list:
+        wrap.sprite.move(b, 3,0)

@@ -1,6 +1,5 @@
-"""поместите все номера спрайтов в список.
-с помощью for поместите каждый спрайт в случайное место на экране,
-используйте только левую сторону экрана
+"""
+рядом с каждым спрайтом создайте огненный шар
 """
 import random
 
@@ -17,8 +16,8 @@ e= wrap.sprite.add("mario-enemies", 100, 100, "beetle_blue_go")
 l = [a,b,c,d,e]
 
 for s in l:
-    wrap.sprite.move_to(s, random.randint(30, 300), random.randint(30, 570))
-
-
-import wrap_py
-wrap_py.app.start()
+    y = random.randint(30, 300)
+    wrap.sprite.move_to(s, random.randint(30, 300), y)
+    wrap.sprite.set_size(s, random.randint(30,130), random.randint(30,130))
+    ball = wrap.sprite.add("mario-enemies", 0, y, "fire_ball")
+    wrap.sprite.move_left_to(ball, wrap.sprite.get_right(s))

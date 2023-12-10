@@ -9,7 +9,3 @@ wrap.sprite.add("mario-1-big", 100, 100, "duck")
 wrap.sprite.add("pacman", 100, 100, "enemy_blue_down1")
 wrap.sprite.add("mario-princess", 100, 100, "princess")
 wrap.sprite.add("mario-enemies", 100, 100, "beetle_blue_go")
-
-
-import wrap_py
-wrap_py.app.start()

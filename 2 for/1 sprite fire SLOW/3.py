@@ -18,7 +18,3 @@ l = [a,b,c,d,e]
 for s in l:
     wrap.sprite.move_to(s, random.randint(30, 300), random.randint(30, 570))
     wrap.sprite.set_size(s, random.randint(30,130), random.randint(30,130))
-
-
-import wrap_py
-wrap_py.app.start()
